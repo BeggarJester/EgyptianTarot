@@ -10,6 +10,7 @@ import com.example.egyptiantarot.databinding.ActivityMainBinding
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.util.*
+import kotlin.math.absoluteValue
 
 val cardFiles: IntArray = intArrayOf(
     R.drawable.card0,
@@ -711,7 +712,7 @@ class MainActivity : AppCompatActivity() {
 
         bindingClass.button.setOnClickListener {
             bindingClass.button.visibility = View.GONE
-            cardNumber = LocalDate.now().format(DateTimeFormatter.ofPattern("dd LLLL yyyy")).hashCode() % 79
+            cardNumber = LocalDate.now().format(DateTimeFormatter.ofPattern("dd LLLL yyyy")).hashCode().absoluteValue % 79
             bindingClass.imageView.setImageResource(cardFiles[cardNumber])
             bindingClass.imageView.isEnabled = true
         }
