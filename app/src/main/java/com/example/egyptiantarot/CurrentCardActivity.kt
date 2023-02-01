@@ -21,7 +21,7 @@ class CurrentCardActivity : AppCompatActivity() {
 
         bindingClass.CardTextView.text = objectList?.get(massage)?.Name
         bindingClass.MeaningTextView.movementMethod = ScrollingMovementMethod()
-        bindingClass.MeaningTextView.setPadding(25,0,25,75)
+        bindingClass.MeaningTextView.setPadding(25,0,25,135)
         bindingClass.MeaningTextView.text = objectList?.get(massage)?.Description
         bindingClass.root.setBackgroundResource(cardBacks[massage])
         bindingClass.root.background.alpha = 50
